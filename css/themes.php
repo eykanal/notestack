@@ -95,6 +95,8 @@ a:hover {
 			'note-buttons-color' 	=> 'rgba(50,50,50,0.6)', 
 			'note-textarea-bg' 		=> 'white',
 			'textarea-box-shadow'	=> 'inset 0px 0px 10px rgba(0,0,0,0.5)',
+			'textarea-highlight-bg' => '#b4d5fe' ,
+      		'textarea-highlight-color' => '#222222' ,
 			'default-font' 			=> '"courier new", monospace',
 			'markdown-header-style'	=> 'font-family: "Museo500";
 										text-transform: uppercase;
@@ -125,7 +127,7 @@ a:hover {
 										background: -webkit-gradient(linear,left top,left bottom,from(#F29101),to(#E68901));", 
 			'note-bg' 				=> 'rgba(30,30,30,0.5)',
 			'note-current-bg' 		=> 'rgba(30,30,30,0.95)',
-			'note-edit-bg' 			=> 'rgba(100,100,100,0.95)',
+			'note-edit-bg' 			=> 'rgba(175,175,175,0.95)',
 			'note-edit-border'		=> '2px solid rgba(0,0,0,0.5)',
 			'note-border-rad-px' 	=> '10',
 			'note-border' 			=> '1px solid rgba(50,50,50,1)',
@@ -133,6 +135,8 @@ a:hover {
 			'note-boxshadow' 		=> '2px 2px 16px rgba(0,0,0,0.5)',
 			'note-textarea-bg' 		=> 'url(../images/moleskine.jpg)',
 			'textarea-box-shadow'	=> 'inset 0px 0px 10px rgba(0,0,0,0.6)',
+			'textarea-highlight-bg' => '#F29101' ,
+      		'textarea-highlight-color' => '#222222' ,
 			'default-font' 			=> '"courier new", monospace',
 			'markdown-header-style'	=> 'font-family: "Museo500";
 										text-transform: uppercase;
@@ -169,6 +173,8 @@ a:hover {
 			'note-boxshadow' 		=> '2px 2px 16px rgba(0,0,0,0.6)',
 			'note-textarea-bg' 		=> 'white',
 			'textarea-box-shadow'	=> 'inset 1px 1px 5px rgba(0,0,0,0.2)',
+			'textarea-highlight-bg' => '#b4d5fe' ,
+      		'textarea-highlight-color' => '#222222' ,
 			'default-font' 			=> '"courier new", monospace',
 			'markdown-header-style'	=> 'font-family: "Museo500";
 										text-transform: uppercase;
@@ -209,6 +215,8 @@ a:hover {
 			'note-boxshadow' 		=> '2px 2px 16px rgba(0,0,0,0.6)',
 			'note-textarea-bg' 		=> '#FFFFD9',
 			'textarea-box-shadow'	=> 'inset 1px 1px 5px rgba(0,0,0,0.4)',
+			'textarea-highlight-bg' => '#b4d5fe' ,
+      		'textarea-highlight-color' => '#222222' ,
 			'default-font' 			=> '"MuseoSans-500", sans-serif',
 			'markdown-header-style'	=> 'font-family: "Museo300";
 										text-transform: uppercase;
@@ -328,7 +336,13 @@ a:hover {
 			-webkit-box-shadow: <?php echo $options['textarea-box-shadow']; ?>;
 			-moz-box-shadow: <?php echo $options['textarea-box-shadow']; ?>;
 		}
-	
+
+    .theme-<?php echo $theme; ?> .window .note .textarea textarea::selection,
+    .theme-<?php echo $theme; ?> .window .note .textarea textarea::-moz-selection {
+      background-color: <?php echo $options['textarea-highlight-bg']; ?>;
+      /*color: <?php echo $options['textarea-highlight-color']; ?>;*/
+    }	
+
 		/*NOTE TEXTAREA WHEN FOCUSED*/
 		.theme-<?php echo $theme; ?> .window .note .textarea textarea:focus {
 			outline: none;
@@ -680,6 +694,7 @@ a:hover {
 	
 		.appearance .font,
 		.appearance .fontsize,
+		.appearance .sortby,
 		.appearance .tag-pref {
 			font-size: 1.5em;
 			background: white;

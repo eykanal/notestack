@@ -1,8 +1,26 @@
-Notestack.me
-Britt O'Halloran
-britt.j.ohalloran@gmail.com
+// NOTESTACK.ME CHANGE HISTORY
 
-// CHANGE HISTORY
+Contributors:
+Britt O'Halloran (brittohalloran) - https://github.com/brittohalloran
+Eliezer Kanal (eykanal) - https://github.com/eykanal
+
+2011-12-23 - v0.8.22-23
+- added public dev site (dev.notestack.me)
+
+2011-12-22 - v0.8.21
+- fixed text highlighting in firefox on moleskine theme [eykanal]
+
+2011-12-20 - v0.8.11 ... v0.8.20
+- updated deploy scripts
+
+2011-12-20 - v0.8.10
+- fixed markdown list indentation [eykanal]
+
+2011-12-13 - v0.8.9
+- added markdown blockquote support [eykanal]
+
+2011-12-11 - v0.8.8
+- added sort by alphabetic option (in settings)
 
 2011-09-07 - v0.8.7
 - fixed bug with viewing labels

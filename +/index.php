@@ -41,7 +41,7 @@
 	  })();
 	</script>
 </head>
-<body class="theme-moleskine">
+<body class="theme-moleskine <?php if ($subdomain=="dev"){echo "dev";};?>">
 	<div id="full-window" class="fullwindow">
 		<div id='sidebar' class='sidebar'>
 			<div id="searchbar" class='search'>
@@ -84,6 +84,16 @@
 				</div>
 				<div class="content">
 					<div class="appearance settings_pane show">
+						<div class="pane_section">
+						  <h3>Sorting</h3>
+						  <div id="sortby-modified" class="sortby">
+								<div class="name sortby-modified">modified date</div>
+							</div>
+						  <div id="sortby-alphabetic" class="sortby">
+								<div class="name sortby-alphabetic">alphabetic</div>
+							</div>
+						</div>
+						<div class="clear"></div>
 						<div class="pane_section">
 							<h3>Tags</h3>
 							<div id="tags-pref" class="tag-pref">
@@ -269,6 +279,13 @@
 			<div class="clear-tag-filter" title="clear filter (a)">x</div>
 		</div>
 	</div>
+	<?php
+  	if ($subdomain == "dev"){
+  ?>
+  <div class="dev-warning">Warning: This is the cutting edge developers version of notestack. Things may be broken. We recommend the <a href="http://notestack.me">main site.</a></dev>
+  <?php
+  	};
+  ?>
 	<!-- SCRIPTS -->
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js"></script>
